@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Todo List</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Archivo:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&family=Outfit:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- App -->
+    <main class="app">
+      <!-- Greeting and username -->
+      <section class="greeting">
+        <h2 class="title">
+          What's up,
+          <input type="text" id="name" class="name" placeholder="Name here" />
+        </h2>
+      </section>
+      <!-- End of Greeting and username-->
+
+      <!-- Creating New Todo -->
+      <section class="create-todo">
+        <h3>CREATE A TODO</h3>
+        <form id="new-todo-form">
+          <h4>What's on your todo?</h4>
+          <input
+            type="text"
+            placeholder="e.g. Get some milk"
+            name="content"
+            class="content"
+          />
+
+          <h4>Pick a category</h4>
+          <div class="options">
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category1"
+                value="business"
+              />
+              <span class="bubble business"></span>
+              <div>Business</div>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category2"
+                value="personal"
+              />
+              <span class="bubble personal"></span>
+              <div>Personal</div>
+            </label>
+          </div>
+
+          <div class="button">Add todo</div>
+        </form>
+      </section>
+      <!-- End of creation of a New Todo -->
+
+      <!-- Todo List -->
+      <section class="todo-list">
+        <h3>TODO LIST</h3>
+        <ul class="list insertionList">
+          <!-- Example of todo item structure  -->
+
+          <!-- div class="todo-item">
+            <label>
+              <input type="checkbox" />
+              <span class="bubble business"></span>
+            </label>
+            <div class="todo-content">
+              <input type="text" value="Make a video" readonly />
+            </div>
+            <div class="actions">
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </div>
+          </div> -->
+        </ul>
+      </section>
+      <div class="box-modal hidden">
+        <div class="body-modal">
+          <div class="inner-body-modal">
+            Error ! Please pick a category and write a todo.
+          </div>
+        </div>
+      </div>
+      <!-- End of Todo List -->
+      <div class="overlay hidden"></div>
+    </main>
+    <!-- End of App -->
+
+    <!-- Importing JS -->
+    <script defer src="script.js"></script>
+    <!-- End of Importing JS -->
+  </body>
+</html>
